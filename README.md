@@ -1,4 +1,4 @@
-# E-CommereceJavaSpring
+# E-CommerceJavaSpring
 
 Design an online apparel store using servlets. The store keeps records for its items in a database where
 some items may be discounted and some other items should be displayed as “new arrivals”. A user may
