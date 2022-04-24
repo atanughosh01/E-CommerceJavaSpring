@@ -18,7 +18,10 @@ public class MyUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		Users user = uc.findByEmail(username).orElse(new Users());
+		// Users user = uc.findByEmail(username).orElse(new Users());
+		Users user = uc.findByEmail(username).orElse(null);
+		if (user == null)
+			throw new UsernameNotFoundException(username);
 		return new MyUserDetails(user);
 	}
 }
