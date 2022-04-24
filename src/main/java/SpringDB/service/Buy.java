@@ -8,8 +8,15 @@ import SpringDB.schema.Users;
 @Service
 public class Buy {
 
-	// If user buys an apparel, associate it with the user and set the order type
-	// according to the items bought
+	/**
+	 * 
+	 * @param a
+	 * @param u
+	 * @return Users
+	 * 
+	 *         If user buys an apparel, associate it with the user and set the order
+	 *         type according to the items bought
+	 */
 	public Users buy(Apparel a, Users u) {
 		Order o = new Order();
 		Set<Apparel> ap = u.getAp();
