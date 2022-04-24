@@ -1,4 +1,4 @@
-package SpringDB;
+package SpringDB.controller;
 
 import java.util.List;
 
