@@ -24,7 +24,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	UserDetailsService userDetailsService;
 
 	/**
-	 * Handles authentication service to login to the admin account
+	 * 
+	 * @param auth
+	 *             Handles authentication service to login to the admin account
 	 */
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -36,7 +38,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	}
 
 	/**
-	 *  Handles actions of users/admins based on the roles assigned to them
+	 * 
+	 * @param http
+	 *             Handles actions of users/admins based on the roles assigned to
+	 *             them
 	 */
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -53,7 +58,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	/**
 	 * 
-	 * @Bean Indicates that a method produces a bean to be managed by the Spring container.
+	 * @Bean Indicates that a method produces a bean to be managed by the Spring
+	 *       container.
 	 * 
 	 */
 	@Bean
@@ -69,7 +75,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	}
 
 	/**
-	 * This method produces a bean to be managed by the Spring container to encode passwords
+	 * This method produces a bean to be managed by the Spring container to encode
+	 * passwords
 	 */
 	@Bean
 	public PasswordEncoder getPasswordEncoder() {

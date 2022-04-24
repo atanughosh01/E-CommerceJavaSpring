@@ -27,8 +27,13 @@ public class MyUserDetails implements UserDetails {
 		this.userName = uname;
 	}
 
-	// Overrides prev method to fetch user details
-	// authorities => gets list of comma-separated roles of the authenticated users
+	/**
+	 * 
+	 * @param u
+	 *          Overrides prev method to fetch user details
+	 *          authorities => gets list of comma-separated roles of the
+	 *          authenticated users
+	 */
 	public MyUserDetails(Users u) {
 		userId = u.getUserId();
 		userName = u.getEmail();

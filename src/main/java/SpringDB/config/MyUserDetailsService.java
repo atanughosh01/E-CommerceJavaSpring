@@ -15,6 +15,10 @@ public class MyUserDetailsService implements UserDetailsService {
 	@Autowired
 	UserCrud uc;
 
+	/**
+	 * @param username
+	 *                 Searches the DB to get the User by Corresponding User Mail ID
+	 */
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
